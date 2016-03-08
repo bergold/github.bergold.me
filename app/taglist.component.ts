@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {Tag} from './github';
+import {DisplaynamePipe} from './displayname.pipe';
 
 @Component({
   selector: 'my-taglist',
@@ -7,17 +8,23 @@ import {Tag} from './github';
     <div>
       <h2>Tags</h2>
       <ul class="tags">
-        <li *ngFor="#tag of tags">
-          <span>{{tag.name}}</span>
+        <li *ngFor="#tag of tags" (click)="doSearch('tag:' + tag.name)">
+          <span>{{tag.name | displayname}}</span>
         </li>
       </ul>
     </div>
-  `
+  `,
+  pipes: [DisplaynamePipe]
 })
 export class TaglistComponent {
   public tags: Tag[] = [
-    { "name": "Electronics" },
-    { "name": "Web" },
-    { "name": "Arduino" }
+    { "name": "electronics" },
+    { "name": "web" },
+    { "name": "arduino" },
+    { "name": "mobile-app" }
   ];
+  
+  doSearch(query) {
+    console.log('doSearch', query);
+  }
 }
