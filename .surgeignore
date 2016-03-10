@@ -1,0 +1,4 @@
+!node_modules/systemjs
+!node_modules/es6-shim
+!node_modules/angular2
+!node_modules/rxjs
