@@ -1,6 +1,6 @@
 import {Pipe, PipeTransform} from 'angular2/core';
 /*
- * Transforms a internall identifier to a human readable string.
+ * Transforms a internal identifier to a human readable string.
  * 
  * Example:
  *   {{ 'the-house' | displayname }}
