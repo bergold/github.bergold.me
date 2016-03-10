@@ -1,7 +1,9 @@
-import {Tag} from './github.ts';
+import {Tag} from './github';
 
 export var TAGLIST: Tag[] = [
-  { "name": "Electronics" },
-  { "name": "Web" },
-  { "name": "Arduino" }
+  { "name": "electronics" },
+  { "name": "web" },
+  { "name": "arduino" },
+  { "name": "mobile-app" },
+  { "name": "chrome-app" }
 ];

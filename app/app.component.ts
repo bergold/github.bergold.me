@@ -1,6 +1,8 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {TaglistComponent} from './taglist.component';
+import {RepolistComponent} from './repolist.component';
 import {SearchComponent} from './search.component';
+import {GithubService} from './github.service';
 
 @Component({
   selector: 'my-app',
@@ -19,10 +21,20 @@ import {SearchComponent} from './search.component';
           <my-search></my-search>
         </div>
         <div class="layout__content">
+          <my-repolist></my-repolist>
         </div>
       </div>
     </div>
   `,
-  directives: [TaglistComponent, SearchComponent]
+  directives: [TaglistComponent, RepolistComponent, SearchComponent],
+  providers: [GithubService]
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+  
+  constructor(private _githubService: GithubService) {}
+  
+  ngOnInit() {
+    
+  }
+  
+}

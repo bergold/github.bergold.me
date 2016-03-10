@@ -9,7 +9,6 @@ export interface Repo {
   full_name: string;
   description: string;
   fork: boolean;
-  url: string;
   html_url: string;
   homepage: string;
   pushed_at: string;
