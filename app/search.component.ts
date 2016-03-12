@@ -3,12 +3,8 @@ import {Component} from 'angular2/core';
 
 @Component({
   selector: 'my-search',
-  template: `
-    <div>
-      <input type="text" placeholder="Search">
-      <button type="button">Go</button>
-    </div>
-  `
+  templateUrl: 'app/search.component.html',
+  styleUrls: ['app/search.component.css']
 })
 export class SearchComponent {
   

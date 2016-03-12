@@ -1,0 +1,22 @@
+.repos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.repos::after {
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.repo {
+  display: block;
+  padding: 8px;
+  margin: 8px;
+  width: 256px;
+  height: 192px;
+  float: left;
+  background: #fff;
+  box-shadow: 0 0 4px rgba(0,0,0,0.1);
+  border-radius: 2px;
+}

@@ -5,16 +5,8 @@ import {DisplaynamePipe} from './displayname.pipe';
 
 @Component({
   selector: 'my-taglist',
-  template: `
-    <div>
-      <h2>Tags</h2>
-      <ul class="tags">
-        <li *ngFor="#tag of tags" (click)="doSearch('tag:' + tag.name)">
-          <span>{{tag.name | displayname}}</span>
-        </li>
-      </ul>
-    </div>
-  `,
+  templateUrl: 'app/taglist.component.html',
+  styleUrls: ['app/taglist.component.css'],
   pipes: [DisplaynamePipe]
 })
 export class TaglistComponent implements OnInit {

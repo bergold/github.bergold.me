@@ -1,0 +1,8 @@
+<div>
+  <h2>Tags</h2>
+  <ul class="tags">
+    <li *ngFor="#tag of tags" (click)="doSearch('tag:' + tag.name)" class="tag">
+      <span style="background-color: {{tag.color}}">{{tag.name | displayname}}</span>
+    </li>
+  </ul>
+</div>

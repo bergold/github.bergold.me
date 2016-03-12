@@ -1,19 +1,13 @@
 import {Component, OnInit} from 'angular2/core';
 import {Repo} from './github';
 import {GithubService} from './github.service';
+import {DisplaynamePipe} from './displayname.pipe';
 
 @Component({
   selector: 'my-repolist',
-  template: `
-    <div>
-      <h2>Repos</h2>
-      <ul class="repos">
-        <li *ngFor="#repo of repos" (click)="openRepo(repo.id)">
-          <span>{{repo.full_name}}</span>
-        </li>
-      </ul>
-    </div>
-  `
+  templateUrl: 'app/repolist.component.html',
+  styleUrls: ['app/repolist.component.css'],
+  pipes: [DisplaynamePipe]
 })
 export class RepolistComponent implements OnInit {
   public repos: Repo[];

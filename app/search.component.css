@@ -1,0 +1,19 @@
+:host {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  max-width: 400px;
+}
+
+.input {
+  flex: 1;
+}
+.button {
+  width: 64px;
+}
+

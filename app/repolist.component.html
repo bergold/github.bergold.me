@@ -1,0 +1,13 @@
+<div>
+  <h2>Repos</h2>
+  <ul class="repos">
+    <li *ngFor="#repo of repos" (click)="openRepo(repo.id)" class="repo">
+      <span>{{repo.full_name}}</span>
+      <ul class="taglist">
+        <li *ngFor="#tag of repo.tags" class="tag">
+          <span>{{tag | displayname}}</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,27 @@
+.app {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.aside,
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.aside {
+  width: 224px;
+}
+.main {
+  flex: 1;
+}
+
+.header {
+  height: 64px;
+  background: #4caf50;
+}
+.nav,
+.content {
+  flex: 1;
+}

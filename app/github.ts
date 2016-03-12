@@ -1,5 +1,6 @@
 export interface Tag {
   name: string;
+  color: string;
 }
 
 export interface Repo {
